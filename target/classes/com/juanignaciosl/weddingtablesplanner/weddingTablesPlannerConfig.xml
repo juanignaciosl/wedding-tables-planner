@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver>
+	<!--<environmentMode>FAST_ASSERT</environmentMode> -->
+	<!-- Domain model configuration -->
+	<solutionClass>com.juanignaciosl.weddingtablesplanner.DiningConfiguration</solutionClass>
+	<planningEntityClass>com.juanignaciosl.weddingtablesplanner.Guest</planningEntityClass>
+
+	<!-- Score configuration -->
+	<scoreDirectorFactory>
+		<scoreDefinitionType>HARD_SOFT</scoreDefinitionType>
+		<simpleScoreCalculatorClass>com.juanignaciosl.weddingtablesplanner.DiningConfigurationScoreCalculator</simpleScoreCalculatorClass>
+		<!--<scoreDrl>weddingTablesScoreRules.drl</scoreDrl> -->
+	</scoreDirectorFactory>
+
+	<!-- Optimization algorithms configuration -->
+	<termination>
+		<maximumSecondsSpend>3</maximumSecondsSpend>
+	</termination>
+
+	<constructionHeuristic>
+		<constructionHeuristicType>FIRST_FIT_DECREASING</constructionHeuristicType>
+		<!-- <forager>
+			<pickEarlyType>FIRST_NON_DETERIORATING_SCORE</pickEarlyType>
+		</forager> -->
+	</constructionHeuristic>
+
+	<localSearch>
+		<acceptor>
+			<entityTabuSize>7</entityTabuSize>
+		</acceptor>
+
+		<forager>
+			<acceptedCountLimit>1000</acceptedCountLimit>
+		</forager>
+
+	</localSearch>
+
+</solver>

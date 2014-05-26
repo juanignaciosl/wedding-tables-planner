@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.juanignaciosl</groupId>
+	<artifactId>wedding-tables-planner</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Wedding Tables Planner</name>
+	<description>Wedding tables planner, supporting loving ang hating guests, maximizing the known people who sit together.</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.optaplanner</groupId>
+			<artifactId>optaplanner-core</artifactId>
+			<version>6.0.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>17.0</version>
+		</dependency>
+	</dependencies>
+</project>
